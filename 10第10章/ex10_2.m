@@ -1,5 +1,6 @@
+% 变量聚类法
 clc,clear
-a=textread('ch.txt');    
+a=textread('ch.txt');    % 下三角相关系数矩阵
 d=1-abs(a); %进行数据变换,把相关系数转化为距离
 d=tril(d);  %提出d矩阵的下三角部分
 b=nonzeros(d);%去掉d中的零元素
