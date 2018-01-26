@@ -22,6 +22,6 @@ weight=rate/sum(rate)  %计算得分的权重
 Tscore=score*weight'   %对各因子的得分进行加权求和，即求各企业综合得分
 [STscore,ind]=sort(Tscore,'descend')      %对企业进行排序
 display=[score(ind,:)';STscore';ind'] %显示排序结果
-[ccoef,p]=corrcoef([Tscore,y])    %计算F与资产负债的相关系数
-[d,dt,e,et,stats]=regress(Tscore,[ones(n,1),y]);%计算F与资产负债的方程
+[ccoef,p]=corrcoef([Tscore,y])    %计算F与资产负债y的相关系数
+[d,dt,e,et,stats]=regress(Tscore,[ones(n,1),y]);%计算F与资产负债y的方程
 d,stats  %显示回归系数，和相关统计量的值
